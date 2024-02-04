@@ -1,7 +1,8 @@
-import { createApp } from 'vue'
 async function create(afterRenderHook) {
   try {
-    const { default: VueApp } = await import('./VueRenderer.vue')
+    const { createApp } = await import('vue')
+    const { default: VueApp } = await import('./src/VueRenderer.vue')
+
     let app = createApp(VueApp, { afterRenderHook })
     app.mount('#app')
     return {

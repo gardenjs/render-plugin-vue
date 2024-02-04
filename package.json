@@ -1,6 +1,6 @@
 {
   "name": "@gardenjs/render-plugin-vue",
-  "version": "0.0.1-alpha01",
+  "version": "0.0.1-alpha02",
   "description": "Plugin for rendering vue components in gardenjs",
   "main": "index.js",
   "scripts": {
