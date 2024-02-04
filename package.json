@@ -1,0 +1,40 @@
+{
+  "name": "@gardenjs/render-plugin-vue",
+  "version": "0.0.1-alpha01",
+  "description": "Plugin for rendering vue components in gardenjs",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "lint": "eslint src/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gardenjs/render-plugin-vue.git"
+  },
+  "keywords": [
+    "gardenjs",
+    "render",
+    "plugin",
+    "vue"
+  ],
+  "author": "Robin Danzinger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gardenjs/render-plugin-vue/issues"
+  },
+  "homepage": "https://github.com/gardenjs/render-plugin-vue#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "vue": "^3.4.15"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
