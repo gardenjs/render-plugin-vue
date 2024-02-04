@@ -8,7 +8,6 @@ async function create(afterRenderHook) {
     return {
       destroy: () => app?.unmount?.(),
       updateComponent: (props) => {
-        console.log('DEBUG, update', props.component)
         app?.unmount()
         app = createApp(VueApp, { ...props, afterRenderHook })
         app.mount('#app')

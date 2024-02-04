@@ -11,10 +11,6 @@ const props = defineProps([
 onMounted(async () => {
   await props.afterRenderHook?.()
 })
-
-setInterval(() => {
-  console.log('DEBUG', props.component)
-}, 1000)
 </script>
 
 <template>
