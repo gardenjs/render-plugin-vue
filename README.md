@@ -2,4 +2,4 @@
 
 Plugin for rendering Vue components in Gardenjs.
 
-See the [Gardenjs Docs](https://gardenjs.org) (coming soon...) you will find the documentation for Gardenjs.
+In the [Gardenjs Docs](https://gardenjs.org) (coming soon...) you will find documentation on how to get started with Gardenjs.
