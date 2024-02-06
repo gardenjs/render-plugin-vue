@@ -1,3 +1,3 @@
 # render-plugin-vue
 
-Plugin for rendering vue componens in gardenjs
+Plugin for rendering Vue components in Gardenjs.
