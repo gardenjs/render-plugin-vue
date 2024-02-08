@@ -4,13 +4,13 @@ async function create(afterRenderHook) {
     const { default: VueApp } = await import('./src/VueRenderer.vue')
 
     let app = createApp(VueApp, { afterRenderHook })
-    app.mount('#app')
+    app.mount('#garden_app')
     return {
       destroy: () => app?.unmount?.(),
       updateComponent: (props) => {
         app?.unmount()
         app = createApp(VueApp, { ...props, afterRenderHook })
-        app.mount('#app')
+        app.mount('#garden_app')
       },
     }
   } catch (e) {
