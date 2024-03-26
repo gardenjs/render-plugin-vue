@@ -5,6 +5,7 @@ const props = defineProps([
   'selectedExample',
   'das',
   'component',
+  'decorators',
   'afterRenderHook',
 ])
 
@@ -14,10 +15,18 @@ onMounted(async () => {
 </script>
 
 <template>
+  <component v-if="props.decorators?.length > 0" :is="props.decorators[0]">
+    <VueRenderer
+      :selectedExample="props.selectedExample"
+      :das="props.das"
+      :component="props.component"
+      :afterRenderHook="props.afterRenderHook"
+      :decorators="props.decorators.slice(1)"
+    />
+  </component>
   <component
-    v-if="props.component"
+    v-else-if="props.component"
     :is="props.component"
     v-bind="{ ...props.selectedExample.input }"
   />
-  <h1 v-else>No Component selected!</h1>
 </template>
